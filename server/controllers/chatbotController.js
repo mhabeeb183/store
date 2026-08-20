@@ -230,7 +230,7 @@ export const chatbotSearch = async (req, res) => {
           },
           signal: controller.signal,
           body: JSON.stringify({
-            model: "llama3-8b-8192", // Use a valid production model for Groq
+            model: "groq/compound-mini", // Use user's specific Groq model
             temperature: 0.3,
             max_tokens: 200,
             messages: [
