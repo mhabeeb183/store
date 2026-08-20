@@ -29,7 +29,7 @@ const Navbar = ({ wishlistCount = 0 }) => {
 
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-zinc-200/50 py-3.5 transition-all duration-300">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6">
         
         {/* Brand Logo */}
         <div 
@@ -45,7 +45,7 @@ const Navbar = ({ wishlistCount = 0 }) => {
             <span className="text-lg font-black tracking-tight bg-gradient-to-r from-emerald-600 to-teal-700 bg-clip-text text-transparent uppercase">
               FreshCart
             </span>
-            <span className="text-[9px] font-bold text-zinc-400 tracking-widest uppercase -mt-1">
+            <span className="text-[9px] font-bold text-zinc-400 tracking-widest uppercase -mt-1 hidden sm:block">
               AI Market
             </span>
           </div>
@@ -136,7 +136,7 @@ const Navbar = ({ wishlistCount = 0 }) => {
         </ul>
 
         {/* Action Buttons */}
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-1.5 sm:gap-3 items-center">
           
           {/* Language Switcher */}
           <LanguageSwitcher />
@@ -144,7 +144,7 @@ const Navbar = ({ wishlistCount = 0 }) => {
           {/* Wishlist Button */}
           <button 
             onClick={() => navigate("/wishlist")}
-            className={`relative p-2 rounded-xl border border-zinc-200/60 hover:bg-zinc-50 hover:text-emerald-600 text-zinc-650 transition-all duration-200 cursor-pointer ${
+            className={`relative p-1.5 sm:p-2 rounded-xl border border-zinc-200/60 hover:bg-zinc-50 hover:text-emerald-600 text-zinc-650 transition-all duration-200 cursor-pointer ${
               location.pathname === "/wishlist" ? "bg-zinc-50 text-emerald-600 border-emerald-250" : ""
             }`}
             title="Wishlist"
@@ -162,7 +162,7 @@ const Navbar = ({ wishlistCount = 0 }) => {
           {/* Cart Button */}
           <button 
             onClick={() => navigate("/cart")}
-            className={`relative p-2 rounded-xl border border-zinc-200/60 hover:bg-zinc-50 hover:text-emerald-600 text-zinc-650 transition-all duration-200 cursor-pointer ${
+            className={`relative p-1.5 sm:p-2 rounded-xl border border-zinc-200/60 hover:bg-zinc-50 hover:text-emerald-600 text-zinc-650 transition-all duration-200 cursor-pointer ${
               location.pathname === "/cart" ? "bg-zinc-50 text-emerald-600 border-emerald-250" : ""
             }`}
             title="Shopping Cart"
@@ -179,10 +179,10 @@ const Navbar = ({ wishlistCount = 0 }) => {
 
           {/* Profile / Login Button */}
           {user ? (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 sm:gap-2">
               <button 
                 onClick={() => navigate("/profile")}
-                className={`flex items-center gap-1.5 bg-zinc-50 hover:bg-zinc-100 text-zinc-700 px-3.5 py-1.5 rounded-xl border border-zinc-200/60 cursor-pointer transition text-xs font-semibold ${
+                className={`flex items-center gap-1.5 bg-zinc-50 hover:bg-zinc-100 text-zinc-700 p-1.5 sm:px-3 sm:py-1.5 rounded-xl border border-zinc-200/60 cursor-pointer transition text-xs font-semibold ${
                   location.pathname === "/profile" ? "ring-2 ring-emerald-500 bg-white border-transparent" : ""
                 }`}
               >
@@ -194,7 +194,7 @@ const Navbar = ({ wishlistCount = 0 }) => {
 
               <button
                 onClick={handleLogout}
-                className="bg-zinc-150 hover:bg-red-50 hover:text-red-600 text-zinc-500 p-2 rounded-xl transition duration-200 cursor-pointer"
+                className="bg-zinc-150 hover:bg-red-50 hover:text-red-600 text-zinc-500 p-1.5 sm:p-2 rounded-xl transition duration-200 cursor-pointer"
                 title="Logout"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -204,7 +204,7 @@ const Navbar = ({ wishlistCount = 0 }) => {
             </div>
           ) : (
             <Link to="/login">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-1.5 px-3.5 rounded-xl text-xs transition duration-200 shadow-md shadow-emerald-500/10 cursor-pointer">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-1.5 px-2.5 sm:px-3.5 rounded-xl text-xs transition duration-200 shadow-md shadow-emerald-500/10 cursor-pointer">
                 Login
               </button>
             </Link>

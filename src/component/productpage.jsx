@@ -116,7 +116,7 @@ const ProductPage = ({ wishlist = [], toggleWishlist }) => {
       <Navbar wishlistCount={wishlist.length} />
 
       {/* Premium Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-emerald-950 via-teal-900 to-zinc-900 text-white py-16 px-6 sm:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-r from-emerald-950 via-teal-900 to-zinc-900 text-white py-12 px-4 sm:py-24 sm:px-6">
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
         <div className="absolute -left-16 -top-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute -right-16 -bottom-16 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -173,7 +173,7 @@ const ProductPage = ({ wishlist = [], toggleWishlist }) => {
       </section>
 
       {/* Main Catalog Section */}
-      <section className="flex-1 max-w-7xl w-full mx-auto px-6 py-12">
+      <section className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4 border-b border-zinc-200/50 pb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-black text-zinc-800 tracking-tight">Our Premium Products</h2>
@@ -266,7 +266,7 @@ const ProductPage = ({ wishlist = [], toggleWishlist }) => {
 
       {/* AI Recommendations Panel */}
       {aiRecs.length > 0 && (
-        <section className="bg-emerald-50/30 border-t border-zinc-200/50 py-12 px-6">
+        <section className="bg-emerald-50/30 border-t border-zinc-200/50 py-8 sm:py-12 px-4 sm:px-6">
           <div className="max-w-7xl w-full mx-auto">
             <div className="mb-8">
               <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block">
